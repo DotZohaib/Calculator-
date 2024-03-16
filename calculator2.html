@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="calculator">
+        <input id="display" class="input" type="text" placeholder="0" readonly>
+        <div class="row">
+            <button onclick="clearDisplay()" class="button special-button">AC</button>
+            <button onclick="deleteLastChar()" class="button special-button">DEL</button>
+            <button onclick="appendToDisplay('%')" class="button special-button">%</button>
+            <button onclick="appendToDisplay('/')" class="button special-button">/</button>
+            <button onclick="appendToDisplay('Math.sqrt')" class="button special-button">√</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('7')" class="button">7</button>
+            <button onclick="appendToDisplay('8')" class="button">8</button>
+            <button onclick="appendToDisplay('9')" class="button">9</button>
+            <button onclick="appendToDisplay('*')" class="button special-button">×</button>
+            <button onclick="appendToDisplay('Math.pow')" class="button special-button">x^y</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('4')" class="button">4</button>
+            <button onclick="appendToDisplay('5')" class="button">5</button>
+            <button onclick="appendToDisplay('6')" class="button">6</button>
+            <button onclick="appendToDisplay('-')" class="button special-button">-</button>
+            <button onclick="appendToDisplay('Math.log')" class="button special-button">log</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('1')" class="button">1</button>
+            <button onclick="appendToDisplay('2')" class="button">2</button>
+            <button onclick="appendToDisplay('3')" class="button">3</button>
+            <button onclick="appendToDisplay('+')" class="button special-button">+</button>
+            <button onclick="appendToDisplay('Math.exp')" class="button special-button">e^x</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('00')" class="button">00</button>
+            <button onclick="appendToDisplay('0')" class="button">0</button>
+            <button onclick="appendToDisplay('.')" class="button">.</button>
+            <button onclick="calculate()" class="button special-button">=</button>
+            <button onclick="appendToDisplay('Math.PI')" class="button special-button">π</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

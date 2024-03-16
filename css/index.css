@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: url(image/wallpaperflare.com_wallpaper\ \(4\).jpg) no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.calculator {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #4de955;
+    border: 5px dotted #dd45ad;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size:60px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#clear {
+    background-color: #ff5722;
+}

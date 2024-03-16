@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/const.css">
+</head>
+<body>
+    <h1 class="h1">Welcome to Calculator</h1>
+    <div class="container">
+        <input class="text" type="text">
+        <div class="form">
+            <button class="button">C</button>
+            <button class="button">/</button>
+            <button class="button">*</button>
+            <button class="button">+</button>
+        </div>
+        <div class="form">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">-</button>
+        </div>
+        <div class="form">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">(</button>
+        </div>
+        <div class="form">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">)</button>
+        </div>
+        <div class="form">
+            <button class="button">%</button>
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button">=</button>
+        </div>
+    </div>
+
+    <script>
+        let string = '';
+        let buttons = document.querySelectorAll('.button');
+        Array.from(buttons).forEach((button) => {
+            button.addEventListener('click', (e) => {
+                if (e.target.innerHTML === '=') {
+                    try {
+                        string = eval(string);
+                        document.querySelector('.text').value = string;
+                    } catch (error) {
+                        string = '';
+                        document.querySelector('.text').value = 'Error';
+                    }
+                } else if (e.target.innerHTML === 'C') {
+                    string = '';
+                    document.querySelector('.text').value = '';
+                } else {
+                    string += e.target.innerHTML;
+                    document.querySelector('.text').value = string;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
